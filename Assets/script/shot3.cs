@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class shot : MonoBehaviour
+public class shot3 : MonoBehaviour
 {
     public void ClickStartButton()
     {
         TinyAudio.PlaySE(TinyAudio.SE.Magic);
-        SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Clear3", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
 

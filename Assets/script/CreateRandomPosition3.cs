@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -57,13 +56,13 @@ public class CreateRandomPosition3 : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 22 )
+        if (time == 19 )
         {
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
-            dead = dead - 1;
+           
         }
-        if (time == 24)
+        if (time == 20)
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
             TinyAudio.PlaySE(TinyAudio.SE.death);

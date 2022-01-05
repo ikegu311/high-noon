@@ -56,18 +56,14 @@ public class CreateRandomPosition2 : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 19 && dead == 0)
+        if (time == 20)
         {
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
             dead = dead - 1;
         }
-        if (time == 24 && dead == -1)
-        {
-            SceneManager.LoadScene("Clear2", LoadSceneMode.Additive);
-            time = time + 1;
-        }
-        else if (time == 24 && dead == 1)
+       
+        if (time == 21)
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
             TinyAudio.PlaySE(TinyAudio.SE.death);
