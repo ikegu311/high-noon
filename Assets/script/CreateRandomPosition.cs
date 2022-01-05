@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class CreateRandomPosition : MonoBehaviour
 {
-    GameObject Button;
 
     [SerializeField]
     [Tooltip("生成するGameObject")]
@@ -18,7 +17,6 @@ public class CreateRandomPosition : MonoBehaviour
     [Tooltip("生成する範囲B")]
     private Transform rangeB;
 
-    public static int dead = 0;
     private float time;
     private float frame;
 
