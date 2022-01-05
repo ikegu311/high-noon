@@ -11,7 +11,6 @@ public class TinyAudio : MonoBehaviour
         Hit,
         Magic,
         death,
-        win,
     }
     [Tooltip("効果音のAudio Clipを、SEの列挙子と同じ順番で設定してください。"), SerializeField]
     AudioClip[] seList;

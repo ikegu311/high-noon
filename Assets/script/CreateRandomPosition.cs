@@ -8,8 +8,6 @@ public class CreateRandomPosition : MonoBehaviour
 {
     GameObject Button;
 
-    shot num;
-
     [SerializeField]
     [Tooltip("生成するGameObject")]
     private GameObject createPrefab;
@@ -47,7 +45,7 @@ public class CreateRandomPosition : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 18)
+        if (time == 8)
         {
             float x = Random.Range(rangeA.position.x, rangeB.position.x);
 
@@ -61,12 +59,12 @@ public class CreateRandomPosition : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 23)
+        if (time == 13)
         {
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
         }
-        if(time==24)
+        if(time==14)
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
             TinyAudio.PlaySE(TinyAudio.SE.death);

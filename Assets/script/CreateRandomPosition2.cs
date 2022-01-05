@@ -42,7 +42,7 @@ public class CreateRandomPosition2 : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 17)
+        if (time == 8)
         {
             float x = Random.Range(rangeA.position.x, rangeB.position.x);
 
@@ -56,14 +56,14 @@ public class CreateRandomPosition2 : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 20)
+        if (time == 11)
         {
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
             dead = dead - 1;
         }
        
-        if (time == 21)
+        if (time == 12)
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
             TinyAudio.PlaySE(TinyAudio.SE.death);
