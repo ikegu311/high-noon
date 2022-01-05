@@ -1,15 +1,10 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CreateRandomPosition : MonoBehaviour
+public class CreateRandomPosition2 : MonoBehaviour
 {
-    GameObject Button;
-
-    shot num;
-
     [SerializeField]
     [Tooltip("生成するGameObject")]
     private GameObject createPrefab;
@@ -47,7 +42,7 @@ public class CreateRandomPosition : MonoBehaviour
             time = time + 1;
         }
 
-        if (time == 18)
+        if (time == 17)
         {
             float x = Random.Range(rangeA.position.x, rangeB.position.x);
 
@@ -56,24 +51,23 @@ public class CreateRandomPosition : MonoBehaviour
             float z = Random.Range(rangeA.position.z, rangeB.position.z);
 
             Instantiate(createPrefab, new Vector3(x, y, z), createPrefab.transform.rotation,transform.parent);
-           
+
             TinyAudio.PlaySE(TinyAudio.SE.Hit);
             time = time + 1;
         }
 
-        if (time == 21 && dead==0)
+        if (time == 19 && dead == 0)
         {
-            Debug.Log(dead);
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
             dead = dead - 1;
         }
-        if(time==25&&dead==-1)
+        if (time == 24 && dead == -1)
         {
-            SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Clear2", LoadSceneMode.Additive);
             time = time + 1;
         }
-        else if(time==25&&dead==0)
+        else if (time == 24 && dead == 1)
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
             TinyAudio.PlaySE(TinyAudio.SE.death);
