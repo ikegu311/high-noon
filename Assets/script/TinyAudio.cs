@@ -18,6 +18,7 @@ public class TinyAudio : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
     /// <summary>
     /// SEで指定した効果音を再生します。

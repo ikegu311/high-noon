@@ -15,6 +15,7 @@ public class CreateRandomPosition2 : MonoBehaviour
     [Tooltip("生成する範囲B")]
     private Transform rangeB;
 
+    public static int dead = 0;
     private float time;
     private float frame;
 
@@ -59,6 +60,7 @@ public class CreateRandomPosition2 : MonoBehaviour
         {
             TinyAudio.PlaySE(TinyAudio.SE.Magic);
             time = time + 1;
+            dead = dead - 1;
         }
        
         if (time == 12)
